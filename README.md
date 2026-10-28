@@ -100,9 +100,9 @@ verwenden, nicht die erzeugten `.class`-Dateien.
 Erwartete Ausgabe:
 
 ```text
-Espresso: 2.00 €
-Espresso, Milch, Sirup: 3.20 €
-Filterkaffee, Sahne: 2.10 €
+Espresso: 2.00 Euro
+Espresso, Milch, Sirup: 3.20 Euro
+Filterkaffee, Sahne: 2.10 Euro
 ```
 
 ## UML-Klassendiagramm
