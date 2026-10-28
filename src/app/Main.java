@@ -9,7 +9,6 @@ import getraenke.Getraenk;
 
 public class Main {
 
-    @SuppressWarnings("java:S1172") // args gehört zum JVM-Einstiegspunkt, wird hier aber nicht benötigt.
     public static void main(String[] args) {
         Getraenk espresso = new Espresso();
 
