@@ -52,16 +52,17 @@ werden von dieser geerbt. Auch mehrfach verwendete Zusätze funktionieren:
 `new Milch(new Milch(new Espresso()))` kostet 3.00 €.
 
 Die Grundgetränke bleiben einfache Klassen mit ihrem Preis und Namen.
-`Main` gibt die drei Beispiele direkt aus. Die Ausgabe verwendet
-`System.out.println` ohne zusätzliche Zahlenformatierung.
-`BigDecimal` bleibt für genaue Rechnungen erhalten; Preise werden aus
-Strings wie `"0.50"` erzeugt.
+`Main` protokolliert die drei Beispiele mit `java.util.logging.Logger`.
+Die Standardausgabe enthält dabei Zeitstempel und Log-Stufe; die Preise
+werden nicht zusätzlich formatiert. `BigDecimal` bleibt für genaue
+Rechnungen erhalten; Preise werden aus Strings wie `"0.50"` erzeugt.
 
 ## Ordnerstruktur und Starten
 
 ```text
 src/
-├── Main.java
+├── app/
+│   └── Main.java
 ├── getraenke/
 │   └── Getraenk.java
 ├── basisgetraenke/
@@ -77,15 +78,15 @@ out/                        # erzeugte .class-Dateien; nicht in Git
 
 Die Ordner unter `src` entsprechen den Java-Paketen. Beispielsweise steht
 `package basisgetraenke;` am Anfang von `Espresso.java`. Über `import`
-werden Klassen aus anderen Paketen eingebunden. `Main` bleibt für einen
-einfachen Programmstart ohne Paket.
+werden Klassen aus anderen Paketen eingebunden. `Main` liegt im Paket `app`
+und wird mit dem vollständigen Klassennamen `app.Main` gestartet.
 
 Voraussetzung: ein installiertes JDK mit `javac` und `java`.
 Diese Befehle im Hauptordner des Projekts ausführen:
 
 ```powershell
-javac --release 8 -encoding UTF-8 -d out -sourcepath src src/Main.java
-java -cp out Main
+javac --release 8 -encoding UTF-8 -d out -sourcepath src src/app/Main.java
+java -cp out app.Main
 ```
 
 `--release 8` erzeugt Bytecode für Java 8 und neuer. Das ist hier wichtig,
@@ -97,7 +98,7 @@ legt die übersetzten Dateien mit ihrer Paketstruktur unter `out` ab.
 Nach Änderungen erneut kompilieren. Zum Bearbeiten immer die `.java`-Dateien
 verwenden, nicht die erzeugten `.class`-Dateien.
 
-Erwartete Ausgabe:
+Erwartete Log-Meldungen (die Standardausgabe enthält zusätzlich Zeitstempel und Log-Stufe):
 
 ```text
 Espresso: 2.00 Euro
