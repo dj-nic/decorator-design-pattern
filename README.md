@@ -52,10 +52,10 @@ werden von dieser geerbt. Auch mehrfach verwendete Zusätze funktionieren:
 `new Milch(new Milch(new Espresso()))` kostet 3.00 €.
 
 Die Grundgetränke bleiben einfache Klassen mit ihrem Preis und Namen.
-`Main` protokolliert die drei Beispiele mit `java.util.logging.Logger`.
-Die Standardausgabe enthält dabei Zeitstempel und Log-Stufe; die Preise
-werden nicht zusätzlich formatiert. `BigDecimal` bleibt für genaue
-Rechnungen erhalten; Preise werden aus Strings wie `"0.50"` erzeugt.
+`Main` gibt die drei Beispiele direkt aus. Die Ausgabe verwendet
+`System.out.println` ohne zusätzliche Zahlenformatierung.
+`BigDecimal` bleibt für genaue Rechnungen erhalten; Preise werden aus
+Strings wie `"0.50"` erzeugt.
 
 ## Ordnerstruktur und Starten
 
@@ -98,7 +98,7 @@ legt die übersetzten Dateien mit ihrer Paketstruktur unter `out` ab.
 Nach Änderungen erneut kompilieren. Zum Bearbeiten immer die `.java`-Dateien
 verwenden, nicht die erzeugten `.class`-Dateien.
 
-Erwartete Log-Meldungen (die Standardausgabe enthält zusätzlich Zeitstempel und Log-Stufe):
+Erwartete Log-Meldungen:
 
 ```text
 Espresso: 2.00 Euro
