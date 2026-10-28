@@ -2,6 +2,36 @@
 
 Lernprojekt zum **Decorator-Entwurfsmuster**. Das Muster wird anhand eines Café-Beispiels mit Kaffeegetränken und frei kombinierbaren Zusätzen in Java erklärt.
 
+## 🐍 Python-Übung für die Klasse
+
+**Ergänze einen Karamell-Dekorierer:** Erweitere ein Getränk um 0,40 Euro
+und den Beschreibungsteil „Karamell“.
+
+**Dauer:** ca. 15–20 Minuten · **Voraussetzung:** Python 3 und Grundlagen zu Klassen und Vererbung · **Zusätzliche Pakete:** keine
+
+| Material | Hier geht es weiter |
+|---|---|
+| **Aufgabenblatt** | **[Aufgabe und Arbeitsschritte öffnen →](uebung_python/README.md)** |
+| Startcode | [starter.py mit zwei TODOs](uebung_python/starter.py) |
+| Musterlösung | [musterloesung.py zum späteren Vergleichen](uebung_python/musterloesung.py) |
+
+Starte im Hauptordner des Repositories:
+
+```powershell
+python uebung_python/starter.py
+```
+
+> Der Startcode ist absichtlich unvollständig. Bei Karamell erscheint zunächst
+> ein `NotImplementedError`; nach dem Ergänzen der TODOs läuft das Beispiel vollständig.
+
+## Orientierung im Repository
+
+[Java-Beispiel](#beispiel-kaffee-mit-zusätzen) ·
+[Java starten](#ordnerstruktur-und-starten) ·
+[UML-Diagramm](Decorator_UML.drawio) ·
+[Vor- und Nachteile mit Einsatzsituationen](Vorteile_Nachteile.md) ·
+[Quellen](#quellen)
+
 ## Beispiel: Kaffee mit Zusätzen
 
 Das Café bietet Espresso und Filterkaffee an. Zu einem Getränk können Zusätze wie Milch, Sirup oder Sahne hinzugefügt werden. Jeder Zusatz ist ein Dekorierer: Er enthält ein anderes `Getraenk`, ergänzt dessen Preis und erweitert seine Beschreibung.
@@ -98,7 +128,7 @@ legt die übersetzten Dateien mit ihrer Paketstruktur unter `out` ab.
 Nach Änderungen erneut kompilieren. Zum Bearbeiten immer die `.java`-Dateien
 verwenden, nicht die erzeugten `.class`-Dateien.
 
-Erwartete Log-Meldungen:
+Erwartete Ausgabe:
 
 ```text
 Espresso: 2.00 Euro
