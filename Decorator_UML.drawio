@@ -1,14 +1,14 @@
 <mxfile host="Electron">
   <diagram name="Decorator Kaffee UML" id="0">
-    <mxGraphModel dx="1285" dy="874" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1000" math="0" shadow="0">
+    <mxGraphModel dx="1768" dy="1201" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1000" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=26;fontStyle=1;fontColor=#17324d;" value="Decorator-Muster: Kaffee mit Zusätzen" vertex="1">
-          <mxGeometry height="45" width="1450" x="80" y="25" as="geometry" />
+          <mxGeometry height="45" width="1450" x="60" y="70" as="geometry" />
         </mxCell>
         <mxCell id="3" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=14;fontColor=#526477;" value="Jeder Dekorierer enthält ein Getränk, delegiert an dieses und ergänzt Preis sowie Beschreibung." vertex="1">
-          <mxGeometry height="30" width="1550" x="80" y="75" as="geometry" />
+          <mxGeometry height="30" width="1550" x="60" y="120" as="geometry" />
         </mxCell>
         <mxCell id="4" parent="1" style="swimlane;fontStyle=1;align=center;startSize=48;html=1;rounded=0;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#1f2937;fontSize=14;horizontal=1;collapsible=0;" value="&lt;&lt;interface&gt;&gt;&#xa;Getraenk" vertex="1">
           <mxGeometry height="130" width="360" x="700" y="150" as="geometry" />
@@ -56,7 +56,7 @@
           <mxGeometry height="80" width="380" y="92" as="geometry" />
         </mxCell>
         <mxCell id="19" parent="1" style="swimlane;fontStyle=1;align=center;startSize=36;html=1;rounded=0;whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#d79b00;fontColor=#1f2937;fontSize=14;horizontal=1;collapsible=0;" value="Milch" vertex="1">
-          <mxGeometry height="140" width="300" x="140" y="690" as="geometry" />
+          <mxGeometry height="140" width="300" x="140" y="680" as="geometry" />
         </mxCell>
         <mxCell id="20" parent="19" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=10;spacingTop=4;html=1;fontColor=#263238;fontSize=12;" value="- zusatzpreis: BigDecimal" vertex="1">
           <mxGeometry height="30" width="300" y="36" as="geometry" />
@@ -68,7 +68,7 @@
           <mxGeometry height="52" width="300" y="78" as="geometry" />
         </mxCell>
         <mxCell id="23" parent="1" style="swimlane;fontStyle=1;align=center;startSize=36;html=1;rounded=0;whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#d79b00;fontColor=#1f2937;fontSize=14;horizontal=1;collapsible=0;" value="Sirup" vertex="1">
-          <mxGeometry height="140" width="300" x="640" y="690" as="geometry" />
+          <mxGeometry height="140" width="300" x="640" y="680" as="geometry" />
         </mxCell>
         <mxCell id="24" parent="23" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=10;spacingTop=4;html=1;fontColor=#263238;fontSize=12;" value="- zusatzpreis: BigDecimal" vertex="1">
           <mxGeometry height="30" width="300" y="36" as="geometry" />
@@ -80,7 +80,7 @@
           <mxGeometry height="52" width="300" y="78" as="geometry" />
         </mxCell>
         <mxCell id="27" parent="1" style="swimlane;fontStyle=1;align=center;startSize=36;html=1;rounded=0;whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#d79b00;fontColor=#1f2937;fontSize=14;horizontal=1;collapsible=0;" value="Sahne" vertex="1">
-          <mxGeometry height="140" width="300" x="1140" y="690" as="geometry" />
+          <mxGeometry height="140" width="300" x="1140" y="680" as="geometry" />
         </mxCell>
         <mxCell id="28" parent="27" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=10;spacingTop=4;html=1;fontColor=#263238;fontSize=12;" value="- zusatzpreis: BigDecimal" vertex="1">
           <mxGeometry height="30" width="300" y="36" as="geometry" />
