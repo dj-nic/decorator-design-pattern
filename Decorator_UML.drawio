@@ -1,13 +1,13 @@
 <mxfile host="Electron">
   <diagram name="Decorator Kaffee UML" id="0">
-    <mxGraphModel dx="861" dy="840" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1000" math="0" shadow="0">
+    <mxGraphModel dx="1285" dy="874" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1000" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=26;fontStyle=1;fontColor=#17324d;" value="Decorator-Muster: Kaffee mit Zusätzen" vertex="1">
           <mxGeometry height="45" width="1450" x="80" y="25" as="geometry" />
         </mxCell>
-        <mxCell id="3" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=14;fontColor=#526477;" value="Jeder Dekorierer enthält ein Getraenk, delegiert an dieses und ergänzt Preis sowie Beschreibung." vertex="1">
+        <mxCell id="3" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=14;fontColor=#526477;" value="Jeder Dekorierer enthält ein Getränk, delegiert an dieses und ergänzt Preis sowie Beschreibung." vertex="1">
           <mxGeometry height="30" width="1550" x="80" y="75" as="geometry" />
         </mxCell>
         <mxCell id="4" parent="1" style="swimlane;fontStyle=1;align=center;startSize=48;html=1;rounded=0;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#1f2937;fontSize=14;horizontal=1;collapsible=0;" value="&lt;&lt;interface&gt;&gt;&#xa;Getraenk" vertex="1">
