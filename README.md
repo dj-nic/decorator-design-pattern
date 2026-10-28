@@ -34,6 +34,77 @@ Die Beschreibung lautet `Espresso, Milch, Sirup`. Beim Aufruf von `getPreis()` f
 
 Alle Bestandteile verwenden dieselbe Schnittstelle. Deshalb lassen sich Getränke und Zusätze beliebig kombinieren, ohne für jede Kombination eine eigene Klasse wie `EspressoMitMilchUndSirup` erstellen zu müssen.
 
+## Einfacher Aufbau des Codes
+
+`GetraenkDekorierer` übernimmt für alle Zusätze dieselben zwei Aufgaben:
+den Aufpreis addieren und den Namen an die Beschreibung anhängen.
+Deshalb braucht jeder Zusatz nur noch einen Konstruktor, zum Beispiel:
+
+```java
+public Milch(Getraenk getraenk) {
+    super(getraenk, "Milch", "0.50");
+}
+```
+
+`super(...)` übergibt das eingepackte Getränk, den Namen und den Aufpreis
+an die gemeinsame Oberklasse. `getPreis()` und `getBeschreibung()`
+werden von dieser geerbt. Auch mehrfach verwendete Zusätze funktionieren:
+`new Milch(new Milch(new Espresso()))` kostet 3.00 €.
+
+Die Grundgetränke bleiben einfache Klassen mit ihrem Preis und Namen.
+`Main` gibt die drei Beispiele direkt aus. Die Ausgabe verwendet
+`System.out.println` ohne zusätzliche Zahlenformatierung.
+`BigDecimal` bleibt für genaue Rechnungen erhalten; Preise werden aus
+Strings wie `"0.50"` erzeugt.
+
+## Ordnerstruktur und Starten
+
+```text
+src/
+├── Main.java
+├── getraenke/
+│   └── Getraenk.java
+├── basisgetraenke/
+│   ├── Espresso.java
+│   └── Filterkaffee.java
+└── beilagen/
+    ├── GetraenkDekorierer.java
+    ├── Milch.java
+    ├── Sirup.java
+    └── Sahne.java
+out/                        # erzeugte .class-Dateien; nicht in Git
+```
+
+Die Ordner unter `src` entsprechen den Java-Paketen. Beispielsweise steht
+`package basisgetraenke;` am Anfang von `Espresso.java`. Über `import`
+werden Klassen aus anderen Paketen eingebunden. `Main` bleibt für einen
+einfachen Programmstart ohne Paket.
+
+Voraussetzung: ein installiertes JDK mit `javac` und `java`.
+Diese Befehle im Hauptordner des Projekts ausführen:
+
+```powershell
+javac --release 8 -encoding UTF-8 -d out -sourcepath src src/Main.java
+java -cp out Main
+```
+
+`--release 8` erzeugt Bytecode für Java 8 und neuer. Das ist hier wichtig,
+weil im Terminal der Compiler aus Java 21, die Laufzeit aber aus Java 8
+verwendet wird. Der Build-Befehl benötigt einen Compiler ab JDK 9.
+
+Der Compiler findet die verwendeten Klassen über `-sourcepath src` und
+legt die übersetzten Dateien mit ihrer Paketstruktur unter `out` ab.
+Nach Änderungen erneut kompilieren. Zum Bearbeiten immer die `.java`-Dateien
+verwenden, nicht die erzeugten `.class`-Dateien.
+
+Erwartete Ausgabe:
+
+```text
+Espresso: 2.00 €
+Espresso, Milch, Sirup: 3.20 €
+Filterkaffee, Sahne: 2.10 €
+```
+
 ## UML-Klassendiagramm
 
 Das bearbeitbare Diagramm liegt in [Decorator_UML.drawio](Decorator_UML.drawio). Es zeigt die Schnittstelle `Getraenk`, die konkreten Getränke, den abstrakten Dekorierer und die Referenz auf das verpackte Getränk.
